@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Password Generator</title>
+    <title>Secure Password Generator</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -16,31 +16,40 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-          <div class="card border border-success">
-            <div class="card-header bg-transparent border-success">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-1">
-                    <img
-                      class="img-fluid"
-                      src="https://vignette.wikia.nocookie.net/fallout/images/d/d7/Lockpick_FO.png"
-                      alt="Lockpick"
-                    />
-                  </div>
-                  <div class="col-11">
-                    <h1 class="card-title display-2">Password Generator</h1>
+          <div class="card-header bg-transparent border-success"></div>
+
+          <div class="card-body">
+            <form>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn btn-outline-secondary">
+                    create
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
                   </div>
                 </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Text input with segmented dropdown button"
+                  placeholder="Secure Password Generator"
+                />
               </div>
-            </div>
-            <div class="card-body">
-              <p class="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-            <div class="card-footer bg-transparent border-success">Footer</div>
+            </form>
           </div>
         </div>
       </div>
