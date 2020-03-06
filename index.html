@@ -13,13 +13,13 @@
     <link rel="stylesheet" href="password-generator.css" />
   </head>
   <body>
-    <div class="container-fluid h-100">
-      <div class="row align-items-center h-100">
-        <div class="col-6 mx-auto">
-          <div class="card mb-3">
+    <div class="container-fluid">
+      <div class="row vh-100 justify-content-center align-items-center">
+        <div class="col-6">
+          <div class="card">
             <div class="card-body">
               <form>
-                <div class="input-group mb-3">
+                <div class="input-group input-group-lg mb-3">
                   <div class="input-group-prepend">
                     <button
                       class="btn btn-outline-success dropdown-toggle"
@@ -31,11 +31,55 @@
                       Create
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <div class="container-fluid form-group">
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="uppercaseCheck"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="uppercaseCheck"
+                            >include Uppercase</label
+                          >
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="lowercaseCheck"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="lowercaseCheck"
+                            >include Lowercase</label
+                          >
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="numericCheck"
+                          />
+                          <label class="custom-control-label" for="numericCheck"
+                            >include 0-9</label
+                          >
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="specialCharCheck"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="specialCharCheck"
+                            >include @!#$&._</label
+                          >
+                        </div>
+                      </div>
                       <div role="separator" class="dropdown-divider"></div>
-
                       <div class="container-fluid form-group">
                         <div class="row">
                           <div class="col">
@@ -44,7 +88,14 @@
                             >
                           </div>
                           <div class="col">
-                            <input type="number" name="passwordLengthNumberInput" id="passwordLengthNumberInput" min="8" max="128" required>
+                            <input
+                              type="number"
+                              name="passwordLengthNumberInput"
+                              id="passwordLengthNumberInput"
+                              min="8"
+                              max="128"
+                              required
+                            />
                           </div>
                         </div>
                         <input
@@ -56,6 +107,13 @@
                           max="129"
                           step="1"
                         />
+                        <button
+                          class="btn btn-block btn-outline-success"
+                          type="submit"
+                          aria-expanded="false"
+                        >
+                          Confirm
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -65,6 +123,15 @@
                     aria-label="Text input with dropdown button"
                     placeholder="Secure Password Generator"
                   />
+                  <div class="input-group-append">
+                    <div class="input-group-text bg-light border-left-0">
+                      <button class="btn p-0">
+                        <span>
+                          <i class="fa fa-copy font-weight-light m-0"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
@@ -89,6 +156,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="https://use.fontawesome.com/cbe36476a4.js"></script>
     <script src="password-generator.js"></script>
   </body>
 </html>
