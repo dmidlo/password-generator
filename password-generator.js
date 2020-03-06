@@ -1,7 +1,11 @@
 // Unicode
 
-function GetUnicode(params) {
-  return;
+function addEvent(element, evnt, funct){
+   return element.addEventListener(evnt, funct, false);
+}
+
+function getElementObject(DOMid) {
+    return document.getElementById(DOMid)
 }
 
 function getTextInputValue(DOMid) {
@@ -12,7 +16,20 @@ function setTextInputValue(DOMid, val) {
   document.getElementById(DOMid).value = val;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+function GetUnicode(params) {
+  return;
+}
+
+function main() {
+  //Test Main Password Field  
   setTextInputValue("passwordTextInput","Johnny Bravo");  
   console.log(getTextInputValue("passwordTextInput"));
-});
+
+  addEvent(getElementObject(""))
+
+
+  return ;
+}
+addEvent(document, "DOMContentLoaded", main())
+
+
